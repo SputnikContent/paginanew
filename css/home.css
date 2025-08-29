@@ -1,0 +1,323 @@
+/* css/home.css */
+
+/* Hero Background Layer (Nueva capa para el efecto de paralaje) */
+.hero-background-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/hero_image.jpg');
+    background-size: cover;
+    background-position: center 70%;
+    background-attachment: fixed;
+    z-index: -1;
+}
+
+/* Hero Section (Ahora solo contiene el texto y la sombra) */
+.hero-image {
+    position: relative;
+    height: 90vh; /* CAMBIO: Aumentado a 90% para hacer la "ventana" más alta */
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.hero-content-wrapper {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.hero-image h1 {
+    font-size: 3.2em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.hero-image p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
+/* Info Section (los 4 apartados principales) */
+.info-section {
+    background-color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.info-section .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.info-item {
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+    background-color: #e0f2f1;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.info-item .info-icon {
+    font-size: 3em;
+    color: #00796b;
+    margin-bottom: 15px;
+}
+
+.info-item h2 {
+    font-size: 1.5em;
+    color: #004d40;
+    margin-bottom: 10px;
+}
+
+.info-item p {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Sections with Image and Text (alternating) */
+.content-sections {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.content-sections .container {
+    padding: 0 20px;
+}
+
+.section-item {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 80px;
+    flex-wrap: wrap;
+}
+
+.section-item:last-child {
+    margin-bottom: 0;
+}
+
+.section-item .text-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.section-item .image-content {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.section-item .image-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.section-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.section-item h2 {
+    font-size: 2em;
+    color: #004d40;
+    margin-bottom: 15px;
+}
+
+.section-item p {
+    font-size: 1.1em;
+    color: #444;
+    margin-bottom: 25px;
+}
+
+/* Mission Section */
+.mission-section {
+    background-color: #00796b;
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.mission-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.mission-section p {
+    font-size: 1.1em;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Call to Action Section */
+.call-to-action-section {
+    background-color: #e0f2f1;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.call-to-action-section h2 {
+    font-size: 2.2em;
+    color: #004d40;
+    margin-bottom: 20px;
+}
+
+.call-to-action-section p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+
+/* --- Estilos para el Efecto RGB --- */
+
+/* Animación de colores RGB */
+@keyframes rgb-effect {
+    0% { background-color: #ff0000; } /* Rojo */
+    17% { background-color: #ff7f00; } /* Naranja */
+    33% { background-color: #ffff00; } /* Amarillo */
+    50% { background-color: #00ff00; } /* Verde */
+    67% { background-color: #0000ff; } /* Azul */
+    83% { background-color: #4b0082; } /* Índigo */
+    100% { background-color: #9400d3; } /* Violeta */
+}
+
+/* Estilos para los íconos de redes sociales */
+.social-icon-link {
+    position: relative;
+    width: 30px; /* CAMBIO: Tamaño del círculo y la imagen reducido a 30px */
+    height: 30px; /* CAMBIO: Tamaño del círculo y la imagen reducido a 30px */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px; /* Espacio entre los íconos */
+    overflow: hidden;
+}
+
+.social-icon-link img {
+    position: relative;
+    z-index: 2;
+    max-width: 100%;
+    height: auto;
+}
+
+/* El círculo animado detrás de cada ícono */
+.social-icon-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transform: scale(1.1);
+    z-index: 1;
+    animation: rgb-effect 8s linear infinite;
+    opacity: 0.8;
+}
+
+/* Opcional: Pequeño efecto de brillo al pasar el mouse */
+.social-icon-link:hover::before {
+    transform: scale(1.2);
+    transition: transform 0.3s ease-out;
+}
+
+/* --- Fin de los Nuevos Estilos --- */
+
+
+/* Responsive adjustments for home page */
+@media (max-width: 768px) {
+    .hero-image h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-image p {
+        font-size: 1em;
+    }
+
+    .info-section .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-item {
+        max-width: 90%;
+    }
+
+    .section-item,
+    .section-item.reverse {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .section-item .image-content {
+        order: -1;
+    }
+
+    .section-item.reverse .image-content {
+        order: -1;
+    }
+
+    .section-item .text-content,
+    .section-item .image-content {
+        min-width: unset;
+        width: 100%;
+    }
+
+    .section-item h2 {
+        font-size: 1.8em;
+    }
+
+    .section-item p {
+        font-size: 1em;
+    }
+
+    .mission-section h2,
+    .call-to-action-section h2 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-image h1 {
+        font-size: 2em;
+    }
+    .hero-image p {
+        font-size: 0.9em;
+    }
+    .info-item {
+        padding: 20px;
+    }
+    .info-item h2 {
+        font-size: 1.3em;
+    }
+    .info-item p {
+        font-size: 0.9em;
+    }
+    .section-item h2 {
+        font-size: 1.5em;
+    }
+    .section-item p {
+        font-size: 0.9em;
+    }
+}

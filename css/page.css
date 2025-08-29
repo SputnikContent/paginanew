@@ -1,0 +1,167 @@
+/* css/page.css */
+
+.page-content {
+    padding: 40px 0;
+    flex-grow: 1; /* Permite que el contenido ocupe el espacio disponible */
+}
+
+.page-content .container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.page-content h1 {
+    font-size: 2.8em;
+    color: #004d40; /* Verde oscuro */
+    margin-bottom: 30px;
+    text-align: center;
+    border-bottom: 2px solid #e0f2f1;
+    padding-bottom: 15px;
+}
+
+.page-content h2 {
+    font-size: 2em;
+    color: #00796b; /* Verde teal oscuro */
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-left: 5px solid #80cbc4; /* Detalle de color */
+    padding-left: 15px;
+}
+
+.page-content p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.page-content p strong { /* Para las frases entre comillas que eran negrita */
+    font-weight: bold;
+    color: #004d40;
+}
+
+.page-content ul {
+    list-style: disc;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    color: #555;
+}
+
+.page-content ul li {
+    margin-bottom: 10px;
+}
+
+.page-content ul li strong { /* Para las frases entre comillas en listas */
+    font-weight: bold;
+    color: #004d40;
+}
+
+.content-image {
+    max-width: 40%; /* Ancho de las imágenes flotantes */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    margin-bottom: 20px;
+}
+
+.image-left {
+    float: left;
+    margin-right: 25px;
+    margin-bottom: 15px; /* Ajuste para espacio con texto */
+}
+
+.image-right {
+    float: right;
+    margin-left: 25px;
+    margin-bottom: 15px; /* Ajuste para espacio con texto */
+}
+
+.highlight-box {
+    background-color: #e0f2f1; /* Verde menta claro */
+    border-left: 5px solid #00796b; /* Barra de color a la izquierda */
+    padding: 20px;
+    margin: 30px 0;
+    border-radius: 5px;
+    font-style: italic;
+    color: #004d40;
+}
+
+.highlight-box p {
+    margin: 0;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.page-content .btn {
+    display: block; /* El botón ocupa todo el ancho */
+    width: fit-content; /* Se ajusta al contenido */
+    margin: 40px auto 0; /* Centra el botón */
+    padding: 12px 25px;
+    font-size: 1.1em;
+}
+
+/* Responsive adjustments for subpages */
+@media (max-width: 768px) {
+    .page-content .container {
+        padding: 20px;
+    }
+
+    .page-content h1 {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    .page-content h2 {
+        font-size: 1.6em;
+        margin-top: 30px;
+        margin-bottom: 15px;
+    }
+
+    .page-content p,
+    .page-content ul,
+    .page-content ul li {
+        font-size: 1em;
+        line-height: 1.7;
+    }
+
+    .content-image {
+        max-width: 100%; /* Imágenes ocupan todo el ancho */
+        float: none; /* Desactiva el flotado */
+        margin: 20px auto; /* Centra las imágenes */
+        display: block;
+    }
+
+    .image-left,
+    .image-right {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .highlight-box {
+        padding: 15px;
+        margin: 25px 0;
+    }
+
+    .page-content .btn {
+        width: 100%; /* El botón se expande a todo el ancho */
+        max-width: 300px; /* Limita el ancho máximo del botón en móviles */
+    }
+}
+
+@media (max-width: 480px) {
+    .page-content h1 {
+        font-size: 1.7em;
+    }
+    .page-content h2 {
+        font-size: 1.4em;
+    }
+    .page-content p,
+    .page-content ul,
+    .page-content ul li {
+        font-size: 0.95em;
+    }
+}
